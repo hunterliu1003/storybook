@@ -1,0 +1,36 @@
+{
+  "name": "storybbok",
+  "version": "1.0.0",
+  "description": "我是一個前端工程師，喜歡和大家分享交流技術。這裡會分享我的 Side Projects、成長經歷、學習筆記等等。如文章內容有誤，或有任何建議，歡迎指正與交流。",
+  "author": "Hunterliu",
+  "private": true,
+  "scripts": {
+    "storybook": "start-storybook -p 9000 -c .storybook",
+    "plop": "plop --plopfile ./plop/index.js",
+    "build:storybook": "build-storybook -c .storybook -o dist"
+  },
+  "dependencies": {
+    "vue": "^2.5.17",
+    "vuetify": "^1.2.2",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.10",
+    "@storybook/addon-centered": "^3.4.10",
+    "@storybook/addon-console": "^1.0.4",
+    "@storybook/addon-options": "^3.4.10",
+    "@storybook/addon-storysource": "^3.4.10",
+    "@storybook/addon-viewport": "^3.4.10",
+    "@storybook/addons": "^3.4.10",
+    "@storybook/vue": "^3.4.10",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-pug-html": "^0.1.2",
+    "plop": "^2.1.0",
+    "pug": "^2.0.3",
+    "storybook-readme": "^4.0.0-beta1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "vue-loader": "^14.2.1",
+    "vue-template-compiler": "^2.5.17"
+  }
+}
