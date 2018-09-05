@@ -1,18 +1,18 @@
-# TheCalendar Component
+# TheCalendar
 
 ## Template
 
 ### default
 
 ```pug
-div
+.container
   TheCalendar
 ```
 
 ### v-model && onSelect
 
 ```pug
-div
+.container
   TheCalendar(
     v-model="date"
     @onSelect="setDate"
@@ -25,8 +25,8 @@ div
 | :---- | :--- | :------: | :------ |
 | value | String | false | null |
 
-value 範例為 '2018-9-4'
+value 範例為 '2018-09-04'
 
 ## Events
 
-@onSelect 會附帶一參數型別為 `string`, 值的格式為 `'2018-9-4'`
+@onSelect 會附帶一參數型別為 `string`, 值的格式為 `'2018-09-04'`

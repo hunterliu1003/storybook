@@ -76,7 +76,8 @@ export default {
           month: this.viewMonth + 1
         })
       } else {
-        this.$emit('onSelect', `${ date.year }-${ date.month + 1 }-${ date.day }`)
+        let selectDate = `${ date.year }-${ ('0' + (date.month + 1)).slice(-2) }-${ ('0' + (date.day)).slice(-2) }`
+        this.$emit('onSelect', selectDate)
       }
     },
     classDay (date) {

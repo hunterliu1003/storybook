@@ -39,7 +39,7 @@ import TheCalendarMonth from './TheCalendarMonth'
 import TheCalendarYear from './TheCalendarYear'
 
 export default {
-  name: 'Thecalendar',
+  name: 'TheCalendar',
   components: {
     TheCalendarDate,
     TheCalendarMonth,
@@ -174,7 +174,8 @@ export default {
   .calendar
     user-select none
     width 250px
-    border 1.5px solid #ddd
+    border 1px solid #ccc
+    border-radius 2px
     padding 18px 10px
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15)
   .calendar__head
