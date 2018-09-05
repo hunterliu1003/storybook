@@ -10,8 +10,6 @@ import '!!style-loader!css-loader!stylus-loader!@/assets/stylus/reset.styl'
 import 'vuetify/dist/vuetify.css'
 
 setOptions({
-  // name: 'hunterliu\'s blog',
-  // url: 'https://github.com/hunterliu1003/blog',
   addonPanelInRight: true
 })
 
