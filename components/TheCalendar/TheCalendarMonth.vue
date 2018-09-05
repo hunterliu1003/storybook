@@ -15,10 +15,7 @@ export default {
     },
     viewYear: {
       type: Number
-    },
-    viewMonth: {
-      type: Number
-    },
+    }
   },
   data: vm => ({
     monthsName: [
@@ -33,12 +30,13 @@ export default {
       'Sep',
       'Oct',
       'Nov',
-      'Dec',
+      'Dec'
     ]
   }),
   computed: {
     months () {
       let months = []
+
       for (let i = 0; i <= 11; i++) {
         if (new Date(this.date).getFullYear() === this.viewYear && new Date(this.date).getMonth() === i) {
           months.push({ year: this.viewYear, month: this.monthsName[i], active: true })
@@ -46,15 +44,14 @@ export default {
           months.push({ year: this.viewYear, month: this.monthsName[i] })
         }
       }
+
       return months
     }
   },
   methods: {
     updateDate (month) {
       this.$emit('setMode')
-      this.$emit('setDate', {
-        month
-      })
+      this.$emit('setViewDate', { month })
     },
     classMonth (month) {
       return {

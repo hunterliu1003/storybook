@@ -15,15 +15,13 @@ export default {
     },
     viewYear: {
       type: Number
-    },
-    viewMonth: {
-      type: Number
-    },
+    }
   },
   computed: {
     years () {
       let years = []
       let start = Math.floor(this.viewYear / 10) * 10 - 1
+
       for (let i = 0; i <= 11; i++) {
         if (new Date(this.date).getFullYear() === start + i) {
           years.push({ year: start + i, active: true })
@@ -31,26 +29,22 @@ export default {
           years.push({ year: start + i })
         }
       }
+
       years[0].prev = true
       years[years.length -1].next = true
+
       return years
     }
   },
   methods: {
     updateDate (year) {
       if (year.prev) {
-        this.$emit('setDate', {
-          year: this.viewYear - 10
-        })
+        this.$emit('setViewDate', { year: this.viewYear - 10 })
       } else if (year.next) {
-        this.$emit('setDate', {
-          year: this.viewYear + 10
-        })
+        this.$emit('setViewDate', { year: this.viewYear + 10 })
       } else {
         this.$emit('setMode')
-        this.$emit('setDate', {
-          year: year.year
-        })
+        this.$emit('setViewDate', { year: year.year })
       }
     },
     classYear (year) {
@@ -71,14 +65,14 @@ export default {
     justify-content center
     flex-wrap wrap
   .calendar__year__item
-    font-family Roboto
-    font-weight 400
-    width 44px
-    height 44px
-    margin 6px
     display flex
     justify-content center
     align-items center
+    width 44px
+    height 44px
+    margin 6px
+    font-family Roboto
+    font-weight 400
     cursor pointer
     border-radius 50%
     transition background-color .3s

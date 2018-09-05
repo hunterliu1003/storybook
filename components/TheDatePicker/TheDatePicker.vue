@@ -28,7 +28,7 @@ export default {
       },
       unbind: function (el) {
         document.body.removeEventListener('click', el.clickOutsideEvent)
-      },
+      }
     }
   },
   props: {
@@ -64,27 +64,27 @@ export default {
     position relative
   .datepicker__main__icon
     position absolute
-    width 30px
-    height 30px
     display flex
     justify-content center
     align-items center
-    cursor pointer
+    width 30px
+    height 30px
     color #aaa
+    cursor pointer
   .datepicker__main__icon--active
     color #59BADD
   .datepicker__main__input
-    cursor pointer
-    font-family Roboto
-    font-weight 500
     width 120px
     height 30px
     line-height 30px
+    font-family Roboto
+    font-weight 500
     padding-left 30px
     border 1px solid #ccc
     border-radius 4px
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15)
     color #666
+    cursor pointer
   .datepicker__main__input--active
     border-color #59BADD
     box-shadow: 0 1px 1px rgba(89, 186, 221, 0.5)

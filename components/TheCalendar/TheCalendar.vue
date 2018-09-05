@@ -12,24 +12,22 @@
         :date="value"
         :viewYear="viewYear"
         :viewMonth="viewMonth"
-        @setDate="setDate"
+        @setViewDate="setViewDate"
         @onSelect="onSelect"
       )
       TheCalendarMonth(
         v-if="mode === 'month'"
         :date="value"
         :viewYear="viewYear"
-        :viewMonth="viewMonth"
         @setMode="setMode('day')"
-        @setDate="setDate"
+        @setViewDate="setViewDate"
       )
       TheCalendarYear(
         v-if="mode === 'year'"
         :date="value"
         :viewYear="viewYear"
-        :viewMonth="viewMonth"
         @setMode="setMode('month')"
-        @setDate="setDate"
+        @setViewDate="setViewDate"
       )
 </template>
 
@@ -43,19 +41,19 @@ export default {
   components: {
     TheCalendarDate,
     TheCalendarMonth,
-    TheCalendarYear,
+    TheCalendarYear
   },
   props: {
     value: {
       type: String,
       default () {
         return null
-      },
+      }
     }
   },
   data: vm => ({
     mode: 'day',
-    date: vm.value ? new Date(vm.value).getTime() : new Date().getTime(),
+    date: vm.value ? new Date(vm.value).getTime() : new Date().getTime()
   }),
   computed: {
     viewYear () {
@@ -63,7 +61,7 @@ export default {
     },
     viewMonth () {
       return new Date(this.date).getMonth()
-    },
+    }
   },
   methods: {
     setMode (mode) {
@@ -80,7 +78,7 @@ export default {
           break
       }
     },
-    setDate (theDate) {
+    setViewDate (theDate) {
       let date = new Date(this.date)
       if (typeof theDate.year === 'number') {
         date.setFullYear(theDate.year)
@@ -130,7 +128,6 @@ export default {
           break
       }
     }
-
   },
   filters: {
     title (value, mode) {
@@ -149,7 +146,7 @@ export default {
         'Sep',
         'Oct',
         'Nov',
-        'Dec',
+        'Dec'
       ]
       switch (mode) {
         case 'year':
@@ -177,7 +174,7 @@ export default {
     border 1px solid #ccc
     border-radius 2px
     padding 10px
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15)
+    box-shadow 0 2px 10px rgba(0, 0, 0, 0.15)
   .calendar__head
     display flex
   .calendar__head__title

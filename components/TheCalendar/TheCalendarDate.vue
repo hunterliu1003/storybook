@@ -19,7 +19,7 @@ export default {
     },
     viewMonth: {
       type: Number
-    },
+    }
   },
   data: vm => ({
     dayOfWeek: [
@@ -29,7 +29,7 @@ export default {
       'We',
       'Th',
       'Fi',
-      'Sa',
+      'Sa'
     ],
   }),
   computed: {
@@ -68,13 +68,9 @@ export default {
   methods: {
     updateDate (date) {
       if (date.prev) {
-        this.$emit('setDate', {
-          month: this.viewMonth - 1
-        })
+        this.$emit('setViewDate', { month: this.viewMonth - 1 })
       } else if (date.next) {
-        this.$emit('setDate', {
-          month: this.viewMonth + 1
-        })
+        this.$emit('setViewDate', { month: this.viewMonth + 1 })
       } else {
         let selectDate = `${ date.year }-${ ('0' + (date.month + 1)).slice(-2) }-${ ('0' + (date.day)).slice(-2) }`
         this.$emit('onSelect', selectDate)
