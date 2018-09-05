@@ -1,6 +1,6 @@
-# TheDatePicker
+# TheCalendar && TheDatePicker
 
-> Vue Component 練習 DatePicker
+> Vue Component 練習
 
 ## Demo
 
