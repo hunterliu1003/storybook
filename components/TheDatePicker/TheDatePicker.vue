@@ -1,7 +1,7 @@
 <template lang="pug">
   .datepicker(v-click-outside="close")
     .datepicker__main(@click="toggle")
-      i.fas.fa-calendar-alt.datepicker__main__icon(:class="{ 'datepicker__main__icon--active': isShow }")
+      i.datepicker__main__icon.fas.fa-calendar-alt(:class="{ 'datepicker__main__icon--active': isShow }")
       .datepicker__main__input(
         :class="{ 'datepicker__main__input--active': isShow }"
       ) {{ value }}

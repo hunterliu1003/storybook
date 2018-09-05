@@ -2,10 +2,10 @@
   .calendar
     .calendar__head
       .calendar__head__prev(@click="prev(mode)")
-        i.fas.fa-less-than.calendar__head__prev__icon
+        i.calendar__head__prev__icon.fas.fa-less-than
       .calendar__head__title(@click="setMode") {{ date | title(mode)}}
       .calendar__head__next(@click="next(mode)")
-        i.fas.fa-greater-than.calendar__head__next__icon
+        i.calendar__head__next__icon.fas.fa-greater-than
     .datapicker__body
       TheCalendarDate(
         v-if="mode === 'day'"
