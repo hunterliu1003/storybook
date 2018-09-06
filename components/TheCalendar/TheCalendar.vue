@@ -169,21 +169,21 @@ export default {
 
 <style lang="stylus" scoped>
   .calendar
-    user-select none
     width 250px
     border 1px solid #ccc
     border-radius 2px
     padding 10px
     box-shadow 0 2px 10px rgba(0, 0, 0, 0.15)
+    user-select none
   .calendar__head
     display flex
   .calendar__head__title
-    width 165px
-    height 30px
-    border-radius 4px
     display flex
     justify-content center
     align-items center
+    width 165px
+    height 30px
+    border-radius 4px
     font-size 14px
     font-family Roboto
     font-weight 500

@@ -96,14 +96,14 @@ export default {
     flex-wrap wrap
   .calendar__date__head,
   .calendar__date__day
-    font-family Roboto
-    font-weight 500
     width 29px
     height 29px
+    border-radius 50%
     margin 1px
     line-height 29px
+    font-family Roboto
+    font-weight 500
     text-align center
-    border-radius 50%
     transition background-color .3s
   .calendar__date__head
     font-weight 500

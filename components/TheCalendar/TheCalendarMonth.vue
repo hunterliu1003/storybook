@@ -69,16 +69,16 @@ export default {
     justify-content center
     flex-wrap wrap
   .calendar__month__item
-    font-family Roboto
-    font-weight 400
-    width 44px
-    height 44px
-    margin 6px
     display flex
     justify-content center
     align-items center
-    cursor pointer
+    width 44px
+    height 44px
     border-radius 50%
+    margin 6px
+    font-family Roboto
+    font-weight 400
+    cursor pointer
     transition background-color .3s
   .calendar__month__item--hover
     &:hover

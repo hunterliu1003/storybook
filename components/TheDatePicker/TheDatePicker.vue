@@ -72,21 +72,21 @@ export default {
     color #aaa
     cursor pointer
   .datepicker__main__icon--active
-    color #59BADD
+    color #59badd
   .datepicker__main__input
     width 120px
     height 30px
-    line-height 30px
-    font-family Roboto
-    font-weight 500
     padding-left 30px
     border 1px solid #ccc
     border-radius 4px
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15)
+    line-height 30px
+    font-family Roboto
+    font-weight 500
     color #666
     cursor pointer
   .datepicker__main__input--active
-    border-color #59BADD
+    border-color #59badd
     box-shadow: 0 1px 1px rgba(89, 186, 221, 0.5)
   .datepicker__calendar
     position absolute

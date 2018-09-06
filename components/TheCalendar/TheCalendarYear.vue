@@ -19,10 +19,11 @@ export default {
   },
   computed: {
     years () {
-      let years = []
-      let start = Math.floor(this.viewYear / 10) * 10 - 1
+      const years = []
+      const start = Math.floor(this.viewYear / 10) * 10 - 1
+      const MONTH_LENGTH = 11
 
-      for (let i = 0; i <= 11; i++) {
+      for (let i = 0; i <= MONTH_LENGTH; i++) {
         if (new Date(this.date).getFullYear() === start + i) {
           years.push({ year: start + i, active: true })
         } else {
@@ -70,11 +71,11 @@ export default {
     align-items center
     width 44px
     height 44px
+    border-radius 50%
     margin 6px
     font-family Roboto
     font-weight 400
     cursor pointer
-    border-radius 50%
     transition background-color .3s
   .calendar__year__item--hover
     &:hover
