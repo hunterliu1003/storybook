@@ -4,6 +4,11 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 Vue.use(Vuex)
+Vue.directive('sortable', {
+  inserted: function (el, binding) {
+    new Sortable(el, binding.value || {})
+  }
+})
 
 import '!!style-loader!css-loader!stylus-loader!@/assets/stylus/reset.styl'
 

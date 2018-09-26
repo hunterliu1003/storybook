@@ -1,10 +1,8 @@
-# TheCalendar && TheDatePicker
-
-> Vue Component 練習
+# storybook 練習
 
 ## Demo
 
-[Demo](https://hunterliu1003.github.io/datepicker/)
+[Demo](https://hunterliu1003.github.io/storybook/)
 
 ## Build Setup
 
